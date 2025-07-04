@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="twibbon, tools, css, html5, css framework"/>
+  <meta name="description" content="Kampanye Twibbon adalah situs mikro Anda sendiri di mana pengguna dapat mendukung tujuan, merek, atau organisasi Anda dengan berbagai cara."/>
+  <meta property="og:image" content="./og.png">
+  <meta name="google-site-verification" content="6rTJ1beqFVOasRbqOUSOwAr-QvsckFFskGOiV9_GxQk" />
+  <title>Twibbon Maker</title>
+  <link rel="stylesheet" href="css/build.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>body { margin: 0; }</style>
+
+
+
+  <!-- p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
+</head>
+
+<body>
+<div class="l-site">
+
+  <!-- Header -->
+  <header id="navigation" class="p-navigation">
+    <div class="p-navigation__row">
+      <div class="p-navigation__banner">
+        <div class="p-navigation__logo">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <div class="u-fixed-width">
+    <h1>Twibbon METAMORF</h1>
+    <hr>
+
+    <div class="p-notification--information">
+      <div class="p-notification__content">
+        <h5 class="p-notification__title">Butuh Twibbon?</h5>
+        <p class="p-notification__message">Gunakan fitur ini untuk membuat Twibbon dari fotomu dengan mudah.</p>
+      </div>
+    </div>
+
+    <p>
+      <button class="p-button has-icon" id="inputbtn">
+        <i class="p-icon--plus"></i><span>Upload fotomu disini</span>
+      </button>
+    </p>
+
+    <div class="u-equal-height">
+      <div class="p-card u-float-left">
+        <p id="canvas"></p>
+      </div>
+    </div>
+
+    <p>
+      <button class="p-button--positive js-processing-button" onclick="download()">
+        <i class="p-icon--spinner u-animation--spin is-light u-hide"></i>
+        <span id="button-label">Download</span>
+      </button>
+      <button class="p-button--negative is-dark" onclick="remake()">
+        <i class="p-icon--spinner u-animation--spin is-light u-hide"></i>
+        <span id="button-label">Reset</span>
+      </button>
+    </p>
+
+   <h2>Caption</h2>
+<hr>
+
+  <div class="p-card" style="padding: 1rem; line-height: 1.8;">
+    <p>✨🌻 <strong>Begin Right, Future Will Light</strong> ✈✨</p>
+    <p>Dengan semangat mentari pagi dan pesawat yang terus melaju menembus awan,<br>
+      aku siap menggapai masa depan yang cerah!</p>
+
+    <p>
+      Hai haii salam kenal!! 👋👋 Namaku 
+      <input type="text" id="nama" placeholder="Nama lengkap" style="width: 160px;"> 
+      dari 
+      <input type="text" id="sekolah" placeholder="Asal sekolah" style="width: 160px;">.<br>
+      Aku bermimpi menjadi 
+      <input type="text" id="cita" placeholder="Cita-cita" style="width: 160px;"> 
+      dan hobiku adalah 
+      <input type="text" id="hobi" placeholder="Hobi" style="width: 160px;">.
+    </p>
+
+    <p>Mari awali langkah dengan benar, karena masa depan dimulai dari sekarang. 🌅✈</p>
+    <p>@smatrinitasofficial @osismatrinitas</p>
+    <p>#BeginRightFutureWillLight #Metamorf2025 #smatrinitas #TwibbonChallenge</p>
+
+    <button class="p-button" onclick="copyQuote()">📋 Copy Quotes</button>
+  </div>
+
+  <script>
+  function copyQuote() {
+    const nama = document.getElementById("nama").value.trim() || "_____";
+    const sekolah = document.getElementById("sekolah").value.trim() || "_____";
+    const cita = document.getElementById("cita").value.trim() || "_____";
+    const hobi = document.getElementById("hobi").value.trim() || "_____";
+
+    const text = `✨🌻 Begin Right, Future Will Light ✈✨
+
+  Dengan semangat mentari pagi dan pesawat yang terus melaju menembus awan,
+  aku siap menggapai masa depan yang cerah!
+
+  Hai haii salam kenal!! 👋👋 Namaku ${nama} dari ${sekolah}.
+  Aku bermimpi menjadi ${cita} dan hobiku adalah ${hobi}.
+
+  Mari awali langkah dengan benar, karena masa depan dimulai dari sekarang. 🌅✈
+
+  @smatrinitasofficial @osismatrinitas
+  #BeginRightFutureWillLight #Metamorf2025 #smatrinitas #TwibbonChallenge`;
+
+    navigator.clipboard.writeText(text).then(() => {
+      alert("✅ Quotes berhasil disalin ke clipboard!");
+    }).catch(err => {
+      alert("❌ Gagal menyalin: " + err);
+    });
+  }
+  </script>
+
+    <hr>
+    
+  </div>
+
+  <!-- Footer -->
+  <footer class="l-footer--sticky p-strip--light">
+    <nav class="row" aria-label="Footer navigation">
+      <div class="has-cookie">
+        <p>© 2025 ICT SMA TRINITAS</p>
+      </div>
+    </nav>
+  </footer>
+</div>
+
+<!-- Scripts -->
+<script src="js/spin.js"></script>
+<script>
+  let scriptElement = document.createElement("script");
+  scriptElement.type = "text/javascript";
+  scriptElement.src = "js/adsense.js";
+  document.body.appendChild(scriptElement);
+</script>
+
+</body>
+</html>
