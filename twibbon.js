@@ -6,7 +6,7 @@ function preload() {
 			var uploadBtn = createFileInput(imageUpload);
 			uploadBtn.parent('inputbtn');
 			  // create canvas
-			  var c = createCanvas(500, 500);
+			  var c = createCanvas(1080, 1350);
 			  background('#fff');
 			  c.parent('canvas');
 			  // Add an event for when a file is dropped onto the canvas
@@ -18,7 +18,7 @@ function preload() {
 		  noStroke();
 		  textSize(21);
 		  textAlign(CENTER);
-		  text('Fotomu akan Muncul disini', width/2, height/2);
+		  text('Fotomu akan Muncul disini', width, height);
 		  noLoop();
 		}
 
@@ -32,7 +32,7 @@ function preload() {
 		// }
 
 		function download() {
-			saveCanvas("twibbon-by-ferry-ayunda", 'jpg');
+			saveCanvas("twibbon-by-ICT-Trinitas", 'jpg');
 		}
 
 		function gotFile(file) {
